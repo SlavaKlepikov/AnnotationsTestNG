@@ -1,0 +1,40 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="TestSuite">
+    <test name="TestOne">
+        <classes>
+           <class name="AnnotationsTestNG" />
+        </classes>
+    </test>
+
+    <test name="TestTwo">
+        <classes>
+           <class name="NewClassAnnotationsTestNG" />
+        </classes>
+    </test>
+
+    <test name="TestThree">	   
+		<groups>
+		   <run>
+               <include name="Acceptance" />
+               <include name="Integration" />
+		   </run>
+		</groups>
+
+		<classes>
+           	   <class name="AnnotationsTestNG" />
+		        <class name="NewClassAnnotationsTestNG" />
+        </classes>
+    </test>
+
+    <test name="TestFour">
+        <classes>
+           <class name="AnnotationsTestNG" >
+               <methods>
+                   <include name="testCase1" />
+                   <include name="testCase7" />
+               </methods>
+           </class>
+        </classes>
+    </test>
+</suite>
